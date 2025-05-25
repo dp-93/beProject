@@ -28,6 +28,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `admintb` (
+  id INT AUTO_INCREMENT PRIMARY KEY,
   `username` varchar(50) NOT NULL,
   `password` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
@@ -47,6 +48,7 @@ INSERT INTO `admintb` (`username`, `password`) VALUES
 --
 
 CREATE TABLE `appointmenttb` (
+   id INT AUTO_INCREMENT PRIMARY KEY,
   `pid` int(11) NOT NULL,
   `ID` int(11) NOT NULL,
   `fname` varchar(20) NOT NULL,
@@ -80,6 +82,7 @@ INSERT INTO `appointmenttb` (`pid`, `ID`, `fname`, `lname`, `gender`, `email`, `
 --
 
 CREATE TABLE `contact` (
+   id INT AUTO_INCREMENT PRIMARY KEY,
   `name` varchar(30) NOT NULL,
   `email` text NOT NULL,
   `contact` varchar(10) NOT NULL,
@@ -100,6 +103,7 @@ INSERT INTO `contact` (`name`, `email`, `contact`, `message`) VALUES
 --
 
 CREATE TABLE `doctb` (
+   id INT AUTO_INCREMENT PRIMARY KEY,
   `username` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL,
   `doctorname` varchar(255) DEFAULT NULL,
@@ -127,6 +131,7 @@ INSERT INTO `doctb` (`username`, `password`, `doctorname`, `email`, `spec`, `doc
 --
 
 CREATE TABLE `location` (
+   id INT AUTO_INCREMENT PRIMARY KEY,
   `latitude` decimal(10,8) NOT NULL,
   `longitude` decimal(11,8) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp()
@@ -156,6 +161,7 @@ INSERT INTO `location` (`latitude`, `longitude`, `created_at`) VALUES
 --
 
 CREATE TABLE `patreg` (
+   id INT AUTO_INCREMENT PRIMARY KEY,
   `pid` int(11) NOT NULL,
   `fname` varchar(20) NOT NULL,
   `lname` varchar(20) NOT NULL,
@@ -194,6 +200,7 @@ INSERT INTO `patreg` (`pid`, `fname`, `lname`, `gender`, `email`, `contact`, `pa
 --
 
 CREATE TABLE `prestb` (
+   id INT AUTO_INCREMENT PRIMARY KEY,
   `doctor` varchar(50) NOT NULL,
   `pid` int(11) NOT NULL,
   `ID` int(11) NOT NULL,
@@ -223,6 +230,7 @@ INSERT INTO `prestb` (`doctor`, `pid`, `ID`, `fname`, `lname`, `appdate`, `appti
 --
 
 CREATE TABLE `products` (
+   id INT AUTO_INCREMENT PRIMARY KEY,
   `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
   `cost` decimal(10,2) NOT NULL,
@@ -248,6 +256,7 @@ INSERT INTO `products` (`id`, `name`, `cost`, `description`, `photo`) VALUES
 --
 
 CREATE TABLE `tdata` (
+   id INT AUTO_INCREMENT PRIMARY KEY,
   `name` varchar(255) NOT NULL,
   `contact` text NOT NULL,
   `latitude` float NOT NULL,

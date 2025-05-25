@@ -1,3 +1,4 @@
+require_once 'config.php';
 <?php
 // Database connection parameters
 $servername = "localhost";
