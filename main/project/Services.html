@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Healthcare Detection System</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- <header>
+    <nav>
+      <div class="logo">
+        <a href="#">Healthcare Detection</a>
+      </div>
+      <div class="nav-menu">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </nav> 
+  </header> -->
+
+  <main>
+    <section class="hero">
+      <h1>Welcome to Healthcare Detection</h1>
+      <p>We provide smart healthcare solutions for your well-being.</p>
+    </section>
+
+    <section class="services">
+      <h2>Our Services</h2>
+      <div class="services-container">
+        <div class="service-card" onclick="redirectToPage('http://localhost/ambulance/index.php')">
+          <div class="card-icon">
+            <i class="fas fa-ambulance"></i>
+          </div>
+          <h3>Ambulance Service</h3>
+          <p>Get quick emergency medical assistance.</p>
+        </div>
+
+        <div class="service-card" onclick="redirectToPage('http://localhost/main/project/retrive.php')">
+          <div class="card-icon">
+            <i class="fas fa-tint"></i>
+          </div>
+          <h3>Blood Bank</h3>
+          <p>Find nearby blood banks and donors.</p>
+        </div>
+
+        <div class="service-card" onclick="redirectToPage('http://localhost/main/project/shop.php')">
+          <div class="card-icon">
+            <i class="fas fa-pills"></i>
+          </div>
+          <h3>Medical Shop</h3>
+          <p>Order medicines and healthcare products online.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Healthcare Detection System. All rights reserved.</p>
+  </footer>
+
+  <script src="https://kit.fontawesome.com/your-font-awesome-kit.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+<script>
+    // Function to redirect to a specific page
+function redirectToPage(pageName) {
+    window.location.href = pageName;
+  }
+  
+  // Example pages for services
+  const ambulancePage = `
+    <header>
+      <nav>
+        <div class="logo">
+          <a href="index.html">Healthcare Detection</a>
+        </div>
+        <div class="nav-menu">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+  
+    <main>
+      <section class="service-details">
+        <h1>Ambulance Service</h1>
+        <p>Our ambulance service provides quick emergency medical assistance. Call our helpline or request an ambulance through our app.</p>
+        <button>Request Ambulance</button>
+      </section>
+    </main>
+  
+    <footer>
+      <p>&copy; 2023 Healthcare Detection System. All rights reserved.</p>
+    </footer>
+  `;
+  
+  const bloodbankPage = `
+    <header>
+      <nav>
+        <div class="logo">
+          <a href="index.html">Healthcare Detection</a>
+        </div>
+        <div class="nav-menu">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+  
+    <main>
+      <section class="service-details">
+        <h1>Blood Bank</h1>
+        <p>Find nearby blood banks and donors through our app. You can also register as a blood donor and contribute to saving lives.</p>
+        <button>Find Blood Bank</button>
+      </section>
+    </main>
+  
+    <footer>
+      <p>&copy; 2023 Healthcare Detection System. All rights reserved.</p>
+    </footer>
+  `;
+</script>

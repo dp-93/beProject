@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Live Meeting</title>
+  <link rel="stylesheet" href="./vendor/bootstrap.min.css">
+  <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="./index.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="../../imgg/favicon.png">
+		
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="../../css/bootstrap.min.css">
+  <!-- Nice Select CSS -->
+  <link rel="stylesheet" href="../../csss/nice-select.css">
+  <!-- Font Awesome CSS -->
+      <link rel="stylesheet" href="../../csss/font-awesome.min.css">
+  <!-- icofont CSS -->
+      <link rel="stylesheet" href="../../csss/icofont.css">
+  <!-- Slicknav -->
+  <link rel="stylesheet" href="../../csss/slicknav.min.css">
+  <!-- Owl Carousel CSS -->
+      <link rel="stylesheet" href="../../csss/owl-carousel.css">
+  <!-- Datepicker CSS -->
+  <link rel="stylesheet" href="../../csss/datepicker.css">
+  <!-- Animate CSS -->
+      <link rel="stylesheet" href="../../csss/animate.min.css">
+  <!-- Magnific Popup CSS -->
+      <link rel="stylesheet" href="../../csss/magnific-popup.css">
+  
+  <!-- Medipro CSS -->
+      <link rel="stylesheet" href="../../csss/normalize.css">
+      <link rel="stylesheet" href="../../stylee.css">
+      <link rel="stylesheet" href="../../csss/responsive.css">
+  
+
+  l
+  	<header class="header" >
+			
+			<!-- Header Inner -->
+			<div class="header-inner">
+				<div class="container">
+					<div class="inner">
+						<div class="row">
+							<div class="col-lg-3 col-md-3 col-12">
+								<!-- Start Logo -->
+								<div class="logo">
+									<a href="index.html"><h1>VirtualHelth Care Pro</h1></a>
+                  <!-- <img src="../../imgg/logo.png " alt="#"> -->
+								</div>
+								<!-- End Logo -->
+								<!-- Mobile Nav -->
+								<div class="mobile-nav"></div>
+								<!-- End Mobile Nav -->
+							</div>
+							<div class="col-lg-7 col-md-9 col-12">
+							
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--/ End Header Inner -->
+		</header>
+	
+</head>
+
+<body>
+  
+
+  <div id="success-alert" class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Congratulations!</strong><span> You can invite others join this channel by click </span><a href="" target="_blank">here</a>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div id="success-alert-with-token" class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Congratulations!</strong><span> Joined room successfully. </span>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div id="success-alert-with-token" class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Congratulations!</strong><span> Joined room successfully. </span>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  
+  <div class="container">
+    <form id="join-form">
+      <div class="row join-info-group">
+          <div class="col-sm">
+            <p class="join-info-text">Meeting Id</p>
+            <input id="appid" type="text" placeholder="enter id" required>
+            <p class="tips">Enter meeting id to generate meeting. <a href="https://docs.agora.io/en/Agora%20Platform/terms?platform=All%20Platforms#a-nameappidaapp-id">this</a></p>
+          </div>
+          <div class="col-sm">
+            <p class="join-info-text">Token(optional)</p>
+            <input id="token" type="text" placeholder="enter token">
+            <p class="tips">If you don`t know what is your token, checkout <a href="https://docs.agora.io/en/Agora%20Platform/terms?platform=All%20Platforms#a-namekeyadynamic-key">this</a></p>
+          </div>
+          <div class="col-sm">
+            <p class="join-info-text">Meeting Name</p>
+            <input id="channel" type="text" placeholder="enter meeting name" required>
+            <p class="tips">Enter the meeting name <a href="https://docs.agora.io/en/Agora%20Platform/terms?platform=All%20Platforms#channel">this</a></p>
+          </div>
+      </div>
+
+      <div class="button-group">
+        <button id="join" type="submit" class="btn btn-primary btn-sm">Join</button>
+        <button id="leave" type="button" class="btn btn-primary btn-sm" disabled>Leave</button>
+      </div>
+    </form>
+
+    <div class="row video-group">
+      <div class="col">
+        <p id="local-player-name" class="player-name"></p>
+        <div id="local-player" class="player"></div>
+      </div>
+      <div class="w-100"></div>
+      <div class="col">
+        <div id="remote-playerlist"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./vendor/jquery-3.4.1.min.js"></script>
+  <script src="./vendor/bootstrap.bundle.min.js"></script>
+  <script src="./AgoraRTC_N-4.20.1.js"></script>
+  <script src="./index.js"></script>
+</body>
+</html>
